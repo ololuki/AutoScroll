@@ -409,7 +409,12 @@ chrome.storage.local.get(defaults, function (options) {
   }
 
   function findScrollNormal(elem) {
-    var style = getComputedStyle(elem)
+    try {
+      var style = getComputedStyle(elem)
+    }
+    catch (error) {
+      return null
+    }
 
     var width = canScroll(style.overflowX) &&
                 elem.scrollWidth > elem.clientWidth
@@ -495,13 +500,13 @@ chrome.storage.local.get(defaults, function (options) {
           // Make sure the click is not on a scrollbar
           // TODO what about using middle click on the scrollbar of a non-<html> element ?
           e.clientX < htmlNode.clientWidth &&
-          e.clientY < htmlNode.clientHeight &&
-          isValid(target)) {
+          e.clientY < htmlNode.clientHeight /*&&
+          isValid(target)*/) {
 
         var elem = findScroll(target)
 
+        stopEvent(e, true)
         if (elem !== null) {
-          stopEvent(e, true)
           show(elem, e.clientX, e.clientY)
         }
       }
