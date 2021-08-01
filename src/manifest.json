@@ -14,10 +14,11 @@
     "storage"
   ],
   "background": {
-    "scripts": [ "main.js" ],
-    "persistent": false
+    "scripts": [ "main.js" ]
   },
-  "options_page": "data/options.html",
+  "options_ui": {
+    "page": "data/options.html"
+  },
   "content_scripts": [{
     "all_frames": false,
     "js": [ "data/defaults.js", "data/AutoScroll.js" ],
