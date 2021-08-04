@@ -1,47 +1,19 @@
-AutoScroll
+AutoScroll without text deselection
 ==========
 
-For users on Linux or Mac, the lack of autoscroll can be a big pain. This extension can help!
+_Become The Master of your middle button and forget about Firefox bugs!_
 
-Intentional differences with Firefox
-====================================
+This extension adds Autoscroll function to Mozilla Firefox.
 
-* AutoScroll does not scroll on `contenteditable` elements; Firefox does
+Wait... Mozilla Firefox has Autoscroll function already built-in, right? Yes, but...
+Firefox 89 introduced bug where middle button down event deselects selected text: https://bugzilla.mozilla.org/show_bug.cgi?id=1714810
 
-For developers
-==============
+This extension is to workaround existing buggy behaviour and keep selection forever during autoscrolling with middle button. You can now mark text, scroll to another section and then go back to your selected text.
 
-Test these sites:
+This project was forked from https://github.com/Pauan/AutoScroll
 
-* <https://easyweb.td.com/waw/idp/login.htm?execution=e1s1>
-* <http://9to5mac.com/>
-* <https://www.willhaben.at/>
-* <http://www.wind.it/it/privati/>
-* <https://www.opengl.org/sdk/docs/man/html/glDrawElements.xhtml>
-* <https://twitter.com/amcharts>
-* <http://addepar.github.io/ember-table/>
-* <https://plus.google.com/>
-* <https://duckduckgo.com/?q=test&ia=meanings>
-* <http://fivethirtyeight.com/>
-* <https://www.washingtonpost.com/news/wonk/wp/2016/01/20/we-have-a-q-tips-problem/>
-* <http://www.indiewire.com/>
-* <http://www.teknoseyir.com/>
-* <http://www.nu.nl/>
+Known limitations
+==========
 
-TODO
-
-* Use the nice Radiance and Ambiance images provided by a user
-* Add better scaling (slower when near the disc, faster when away from the disc, like in Firefox)
-* Add configurable scaling
-* Move speed should be 0 = slowest, 10 = fastest
-* Use a slider for the move speed, rather than a number box
-* Fix the severe bug with pinch-to-zoom on Mac
-* Add better promotional images on the Chrome Web Store
-* Add in an option for reversing the X and Y axis (up is down, down is up, etc.)
-* Add in touchscreen/tablet support
-* When scrolling horizontally, it should only scroll when the mouse is to the left/right of the disc, like in Firefox
-* When scrolling vertically, it should only scroll when the mouse is to the top/bottom of the disc, like in Firefox
-* Add in an option to stop autoscrolling when the user scrolls with the mouse wheel
-* Option for keyboard-only control
-* Option to change the key binding for activating AutoScroll
-* Switch to the new options page system (in Chrome)
+* For the best experience built-in autoscroll setting in firefox should be enabled, because this extension does not work on some pages e.g. addons.mozilla.org. Unfortunaly on these pages autoscroll will still deselect selected text. But middle button will deselect selection on these pages anyway.
+* Also scrollbars are not handled by this extension, but since scrollbars are not bugged and does not deselect selection it is not a problem at all.
