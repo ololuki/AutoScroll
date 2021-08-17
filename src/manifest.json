@@ -20,7 +20,7 @@
     "page": "data/options.html"
   },
   "content_scripts": [{
-    "all_frames": false,
+    "all_frames": true,
     "js": [ "data/defaults.js", "data/AutoScroll.js" ],
     "matches": [ "<all_urls>" ],
     "run_at": "document_end"
