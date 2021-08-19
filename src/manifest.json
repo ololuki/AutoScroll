@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "AutoScroll without text deselection",
-  "version": "0.0.1-alpha",
+  "version": "0.0.1",
   "description": "This extension fixes autoscroll in Firefox. Pages can be scrolled with middle button without loosing text selection. You can mark text, scroll to another section and then go back to your selected text.",
   "minimum_chrome_version": "29",
   "icons": {
